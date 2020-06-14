@@ -3,7 +3,7 @@ php:
   restart: 'always'
   ports:
    - "89:80"
-  #  - "445:443"
+   - "443:443"
   volumes:
    - ./www:/var/www/html
    - ./apache-config.conf:/etc/apache2/sites-enabled/000-default.conf
@@ -14,7 +14,7 @@ db:
   image: mysql:5.7
   restart: 'always'
   ports:
-   - "3307:3306"
+   - "3306:3306"
   volumes:
    - /var/lib/mysql
   environment:

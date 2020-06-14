@@ -14,13 +14,16 @@
 
 Clone o repositorio em seu computador. Rode os comandos:
 
-1 `docker-compose up -d` para rodar em modo desacoplado.
 
-2 `docker-compose up`    para rodar em modo interativo.
+* `docker-compose up -d` para rodar em modo desacoplado.
 
-3 `docker-compose -p nome_projeto up` para rodar em modo interativo nomeando o projeto.
+* `docker-compose up`    para rodar em modo interativo.
 
-4.  Va a pasta www na raiz e crie um diretorio chamado app nele ficara o seu sistema laravel
+* `docker-compose -p nome_projeto up` para rodar em modo interativo nomeando o projeto.
+
+* `docker-compose build` apos uma atualização deve-se reconstruir a imagem
+
+*.  Va a pasta www na raiz e crie um diretorio chamado app nele ficara o seu sistema laravel
 
 
 ## APACHE
