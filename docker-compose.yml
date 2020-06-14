@@ -1,0 +1,22 @@
+php:
+  build: ./php
+  restart: 'always'
+  ports:
+   - "89:80"
+  #  - "445:443"
+  volumes:
+   - ./www:/var/www/html
+   - ./apache-config.conf:/etc/apache2/sites-enabled/000-default.conf
+
+  links:
+   - db
+db:
+  image: mysql:5.7
+  restart: 'always'
+  ports:
+   - "3307:3306"
+  volumes:
+   - /var/lib/mysql
+  environment:
+   - MYSQL_ROOT_PASSWORD=phprs
+   - MYSQL_DATABASE=phprs
